@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="Content-Type" content="text/html"></meta>
+    <title>Futbolistas</title>
+</head>
+<body>
+<div>
+    <h1>Lista de Futbolistas</h1>
+    <ul>
+        <div action="#" th:action="@{/detalle/{id}(id= ${entry.id})}" th:object="${lista}"
+             method="get">
+
+            <li><span th:text="${entry.fecha_nacimiento}">Fecha Nacimiento</span></li>
+            <li><span th:text="${entry.posicion}">Posicion</span></li>
+            <li><span th:text="${entry.altura}">Altura</span></li>
+            <li><span th:text="${entry.peso}">Peso</span></li>
+            <li><span th:text="${entry.sexo}">Sexo</span></li>
+            <li><span th:text="${entry.direccion}">Drieccion</span></li>
+            <li><span th:text="${entry.email}">Correo</span></li>
+            <li><span th:text="${entry.telefono}">Telefono</span></li>
+
+        </div>
+    </ul>
+</div>
+</body>
+</html>

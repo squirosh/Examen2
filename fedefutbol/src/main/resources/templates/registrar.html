@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Anthologies</title>
+</head>
+<body>
+Insertar Futbolista:
+<form action="#" th:action="@{/registrar}" th:object="${nueva}" method="post">
+    <label for="name">Nombre</label>
+    <input type="text" th:field="*{nombre}" id="name">
+    <br>
+    <label for="name">Primer Apellido</label>
+    <input type="text" th:field="*{apellido1}" id="apellido1">
+    <br>
+    <label for="name">Segundo Apellido</label>
+    <input type="text" th:field="*{apellido2}" id="apellido2">
+    <br>
+    <label for="name">Fecha Nacimiento</label>
+    <input type="date" th:field="*{fecha_nacimiento}" id="fecha_nacimiento">
+    <br>
+    <label for="name">Posicion</label>
+    <input type="text" th:field="*{posicion}" id="posicion">
+    <br>
+    <label for="name">Altura</label>
+    <input type="text" th:field="*{altura}" id="altura">
+    <br>
+    <label for="name">Peso</label>
+    <input type="text" th:field="*{peso}" id="peso">
+    <br>
+    <label for="name">Sexo</label>
+    <input type="text" th:field="*{sexo}" id="sexo">
+    <br>
+    <label for="name">Direccion</label>
+    <input type="text" th:field="*{direccion}" id="direccion">
+    <br>
+    <label for="name">Telefono</label>
+    <input type="text" th:field="*{telefono}" id="telefono">
+    <br>
+    <label for="name">Correo</label>
+    <input type="text" th:field="*{email}" id="email">
+    <br>
+     <input type="submit" value="Registar Futbolista">
+</form>
+
+</body>
+</html>
