@@ -44,6 +44,18 @@ public class FutbolistaServiceImpl implements  FutbolistaService {
         return MHelpers.modelMapper().map(futbolista.get(), Futbolista.class);
     }
 
+    @Override
+    public void update(Futbolista futbolista, Long id){
+        Optional<Futbolista> fut = this.futbolistaRepo.findById(id);
+
+        Futbolista futbolista1 = fut.get();
+        futbolista1.setDireccion(futbolista.getDireccion());
+        futbolista1.setEmail(futbolista.getEmail());
+        futbolista1.setTelefono(futbolista.getTelefono());
+
+        this.futbolistaRepo.save(futbolista1);
+    }
+
     private Futbolista convertToFut(final Futbolista futbolista){
         return MHelpers.modelMapper().map(futbolista, Futbolista.class);
     }

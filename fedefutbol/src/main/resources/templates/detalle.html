@@ -9,7 +9,7 @@
 <div>
     <h1>Lista de Futbolistas</h1>
     <ul>
-        <div action="#" th:action="@{/detalle/{id}(id= ${entry.id})}" th:object="${lista}"
+        <div action="#" th:action="@{/detalle/{id}(id= ${entry.id})}" th:object="${detalle}"
              method="get">
 
             <li><span th:text="${entry.fecha_nacimiento}">Fecha Nacimiento</span></li>

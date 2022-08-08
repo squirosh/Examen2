@@ -12,6 +12,8 @@ public interface FutbolistaService {
 
     Futbolista findById(Long id);
 
+    void update(Futbolista futbolista, Long id);
+
     Futbolista findByName(String nombre);
 
 

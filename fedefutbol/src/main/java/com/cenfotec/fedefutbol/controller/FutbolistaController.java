@@ -10,8 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @Controller
 public class FutbolistaController {
 
@@ -51,6 +49,13 @@ public class FutbolistaController {
     public ResponseEntity<Object> findById(@PathVariable("nombre") String nombre){
         return ResponseEntity.ok(this.futbolistaService.findByName(nombre));
 
+    }
+
+    @PutMapping(value = "/{id}/update")
+    public ResponseEntity<Object> updateFut(@RequestBody Futbolista request, @PathVariable Long id){
+        this.futbolistaService.update(request, id);
+
+        return ResponseEntity.ok(Boolean.TRUE);
     }
 
 }
